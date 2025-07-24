@@ -7,48 +7,61 @@
   <style>
     body {
       font-family: Arial, sans-serif;
-      background: #f9f9f9;
+      background: #13111a;
       padding: 6x;
       max-width: 100%;
       overflow-x: auto;
     }
     .container {
+      color: #ffffff;
       max-width: 100%;
       overflow-x: auto;
-      background: white;
-      padding: 20px;
+      background: rgb(50, 53, 64);
+      padding: 10px;
       margin: auto;
       border-radius: 10px;
       box-shadow: 0 0 10px rgba(0,0,0,0.1);
     }
-    input, select, button {
+    input, select {
       padding: 10px;
       font-size: 16px;
       margin: 10px 0;
       width: 100%;
       box-sizing: border-box;
+      border-radius: 10px;
     }
     table {
+      color: #ffffff;
       width: 100%;
       border-collapse: collapse;
-      background: white;
-      font-size: 11px;
+      background: rgb(31, 27, 45);
+      font-size: 12px;
+      border-radius: 10px;
+      overflow: hidden;
+      margin-top: 20px;
     }
     th, td {
-      border: 1px solid #999;
-      padding: 3px;
+      /* border: 1px solid #999; */
+      padding: 10px;
       text-align: center;
     }
     th {
-      background: #f0f0f0;
+      color: #ffffff;
+      background: #2d2d43;
+    }
+    tr:nth-child(even) {
+      background-color: #1d1d36; 
     }
     .buttons {
+      float: left;
+      align-items: center;
+      border-radius: 10px;
       margin-top: 20px;
-      display: flex;
       flex-direction: column;
-      gap: 10px;
+      margin-bottom: 10px;
     }
     .buttons button {
+      padding: 10px;
       background: #007BFF;
       color: white;
       border: none;
