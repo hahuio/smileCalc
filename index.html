@@ -56,14 +56,14 @@
       width: 100%;
       border-collapse: collapse;
       background: rgb(36, 41, 65);
-      font-size: 12px;
+      font-size: 10px;
       border-radius: 10px;
       overflow: hidden;
       margin-top: 20px;
     }
     th, td {
       border: 1px solid #292d32;
-      padding: 10px;
+      padding: 7px;
       text-align: center;
     }
     th {
@@ -162,7 +162,8 @@
     <table>
       <thead>
         <tr>
-          <th>No.</th>
+          <!-- <th>No.</th> -->
+           <!-- in js <td data-label="No.">${index + 1}</td> -->
           <th>Org Plan</th>
           <th>Dia Plan</th>
           <th>Coin Price</th>
@@ -227,7 +228,6 @@
 
         resultTable.innerHTML += `
           <tr>
-            <td data-label="No.">${index + 1}</td>
             <td data-label="Org Plan">${row.orgDiaPlan}</td>
             <td data-label="Dia Plan">${row.diaPlan}</td>
             <td data-label="Coin Price">${row.coinPrice}</td>
