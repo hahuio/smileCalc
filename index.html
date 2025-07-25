@@ -22,7 +22,25 @@
       border-radius: 10px;
       box-shadow: 0 0 10px rgba(0,0,0,0.1);
     }
-    input, select {
+    select {
+      padding: 10px;
+      border: 3px solid #3f425c;
+      background: #282832;
+      color: #ffffff;
+      font-size: 14px;
+      margin: 10px 0;
+      width: 100%;
+      box-sizing: border-box;
+      border-radius: 10px;
+      appearance: none;
+    }
+    select option {
+      background: #282832;
+      color: #ffffff;
+      border-radius: 5px;
+      padding:  10px;
+    }
+    input {
       padding: 10px;
       border: 3px solid #3f425c;
       background: #282832;
@@ -115,18 +133,38 @@
     <label for="profitSelect">Profit Percentage:</label>
     <select id="profitSelect">
       <option value="0">0%</option>
+      <option value="0.5">0.5%</option>
+      <option value="1">1%</option>
+      <option value="1.5">1.5%</option>
+      <option value="2">2%</option>
+      <option value="2.5">2.5%</option>
+      <option value="3">3%</option>
+      <option value="3.5">3.5%</option>
+      <option value="4">4%</option>
+      <option value="4.5">4.5%</option>
       <option value="5">5%</option>
+      <option value="5.5">5.5%</option>
+      <option value="6">6%</option>
+      <option value="6.5">6.5%</option>
+      <option value="7">7%</option>
+      <option value="7.5">7.5%</option>
+      <option value="8">8%</option>
+      <option value="8.5">8.5%</option>
+      <option value="9">9%</option>
+      <option value="9.5">9.5%</option>
       <option value="10">10%</option>
-      <option value="15">15%</option>
-      <option value="20">20%</option>
+      <option value="11">11%</option>
+      <option value="12">12%</option>
+      <option value="13">13%</option>
+      <option value="14">14%</option>
     </select>
 
     <table>
       <thead>
         <tr>
           <th>No.</th>
-          <th>Dia Plan</th>
           <th>Org Plan</th>
+          <th>Dia Plan</th>
           <th>Coin Price</th>
           <th>MMK Result</th>
           <th>Profit</th>
@@ -152,10 +190,28 @@
     const data = [
       { diaPlan: "Weekly Pass", orgDiaPlan: '1 Pass', coinPrice: 76 },
       { diaPlan: "Twilight Pass", orgDiaPlan: '1 Pass', coinPrice: 402.5 },
-      { diaPlan: 86, orgDiaPlan: '78 + 8', coinPrice: 61.5 },
-      { diaPlan: 172, orgDiaPlan: '156 + 16', coinPrice: 122 },
-      { diaPlan: 257, orgDiaPlan: '234 + 23', coinPrice: 177.5 },
-      { diaPlan: 343, orgDiaPlan: '257 + 86', coinPrice: 239 }
+      { diaPlan: 86, orgDiaPlan: '78+8', coinPrice: 61.5 },
+      { diaPlan: 172, orgDiaPlan: '156+16', coinPrice: 122 },
+      { diaPlan: 257, orgDiaPlan: '234+23', coinPrice: 177.5 },
+      { diaPlan: 343, orgDiaPlan: '257+86', coinPrice: 239 },
+      { diaPlan: 429, orgDiaPlan: '257+172', coinPrice: 299.5 },
+      { diaPlan: 514, orgDiaPlan: '257+257', coinPrice: 355 },
+      { diaPlan: 600, orgDiaPlan: '514+86', coinPrice: 416.5 },
+      { diaPlan: 706, orgDiaPlan: '625+81', coinPrice: 480 },
+      { diaPlan: 878, orgDiaPlan: '706+172', coinPrice: 602 },
+      { diaPlan: 963, orgDiaPlan: '706+257', coinPrice: 657.5 },
+      { diaPlan: 1049, orgDiaPlan: '706+343', coinPrice: 719 },
+      { diaPlan: 1135, orgDiaPlan: '706+429	', coinPrice: 779.5 },
+      { diaPlan: 1412, orgDiaPlan: '706+706', coinPrice: 960 },
+      { diaPlan: 2195, orgDiaPlan: '1860+335', coinPrice: 1453 },
+      { diaPlan: 2901, orgDiaPlan: '2195+706', coinPrice: 1933 },
+      { diaPlan: 3688, orgDiaPlan: '3099+589', coinPrice: 2424 },
+      { diaPlan: 5532, orgDiaPlan: '4649+883', coinPrice: 3660 },
+      { diaPlan: 9288, orgDiaPlan: '7740+1548', coinPrice: 6079 },
+      { diaPlan: '50+', orgDiaPlan: 'Double', coinPrice: 39 },
+      { diaPlan: '150+', orgDiaPlan: 'Double', coinPrice: 116.9 },
+      { diaPlan: '250+', orgDiaPlan: 'Double', coinPrice: 187.5 },
+      { diaPlan: '500+', orgDiaPlan: 'Double', coinPrice: 385 },
     ];
 
     function updateTable() {
@@ -172,8 +228,8 @@
         resultTable.innerHTML += `
           <tr>
             <td data-label="No.">${index + 1}</td>
+            <td data-label="Org Plan">${row.orgDiaPlan}</td>
             <td data-label="Dia Plan">${row.diaPlan}</td>
-            <td data-label="Org Dia Plan">${row.orgDiaPlan}</td>
             <td data-label="Coin Price">${row.coinPrice}</td>
             <td data-label="MMK Result">${mmkResult.toFixed(2)}</td>
             <td data-label="Profit">${profitAmount.toFixed(2)}</td>
