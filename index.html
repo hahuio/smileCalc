@@ -126,9 +126,9 @@
 <body>
   <div class="container">
     <h2>SmileOne MM-Price Calculator</h2>
-    <label for="admin" style="background-color: #100e19; padding: 10px; border-radius: 10px;">Contact: <a href="https://t.me/Albert_Dcruze" target="_blank" style="text-decoration: none; color: rgb(17, 60, 253);">Albert D'Cruze</a></label> <br><br>
-    <hr>
-    <label for="admin" style="background-color: #100e19; padding: 10px; border-radius: 10px;">Credit to the Original Creator.</label> <br><br>
+    <label for="admin" style="background-color: #120f1c; padding: 10px; border-radius: 10px; margin-bottom: 20px;">Telegram Contact : <a href="https://t.me/Albert_Dcruze" target="_blank" style="text-decoration: none; color: rgb(88, 113, 255);">Albert D'Cruze</a></label> <br><br>
+
+    <label for="admin" style="font-size: 12px;">(Credit to the original creator of this Calculator)</label> <br><br>
     <label for="smilePrice">Smile Code Price (MMK):</label>
     <input type="number" id="smilePrice" placeholder="Enter Smile Code Price">
 
@@ -165,12 +165,13 @@
       <thead>
         <tr>
           <!-- <th>No.</th> -->
-           <!-- in js <td data-label="No.">${index + 1}</td> -->
-          <th>Org Plan</th>
-          <th>Dia Plan</th>
+            <!-- in js <td data-label="No.">${index + 1}</td> -->
+          <!-- <th>Org Plan</th> -->
+            <!-- in js <td data-label="Org Plan">${row.orgDiaPlan}</td> -->
+          <th>Diamonds</th>
           <th>Coin Price</th>
-          <th>MMK Result</th>
-          <th>Profit</th>
+          <th>Initial MMK</th>
+          <th>Profit MMK</th>
           <th>Total MMK</th>
         </tr>
       </thead>
@@ -230,7 +231,6 @@
 
         resultTable.innerHTML += `
           <tr>
-            <td data-label="Org Plan">${row.orgDiaPlan}</td>
             <td data-label="Dia Plan">${row.diaPlan}</td>
             <td data-label="Coin Price">${row.coinPrice}</td>
             <td data-label="MMK Result">${mmkResult.toFixed(0)}</td>
